@@ -15,7 +15,7 @@
 
 ## Overview
 
-**OSINT Bookmarklets** is a set of 23 browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
+**OSINT Bookmarklets** is a set of 24 browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
 
 ---
 
@@ -38,7 +38,7 @@ Each bookmarklet runs as a self-contained script in the browser. When activated 
 
 **Drag from the website** - Visit [bookmarklets.notalex.sh](https://bookmarklets.notalex.sh) and drag any link to your bookmarks bar.
 
-**Import all bookmarklets** - Download [`bookmarks.html`](https://github.com/notalex-sh/osint-bookmarklets/raw/main/dist/bookmarks.html) and import it into your browser (**Bookmarks > Import Bookmarks from HTML file**). All 23 bookmarklets will be added in an **OSINT Bookmarklets** folder organized by platform.
+**Import all bookmarklets** - Download [`bookmarks.html`](https://github.com/notalex-sh/osint-bookmarklets/raw/main/dist/bookmarks.html) and import it into your browser (**Bookmarks > Import Bookmarks from HTML file**). All 24 bookmarklets will be added in an **OSINT Bookmarklets** folder organized by platform.
 
 **Copy and paste** - Pre-minified `javascript:` URIs are in [`dist/bookmarklets/`](https://github.com/notalex-sh/osint-bookmarklets/tree/main/dist/bookmarklets). Create a new bookmark and paste the contents as the URL.
 
@@ -64,6 +64,7 @@ Each bookmarklet runs as a self-contained script in the browser. When activated 
 | **Facebook Marketplace** | Extract user ID and open their Marketplace seller page |
 | **Facebook Listing Timestamp** | Show the exact date a Marketplace listing was created |
 | **Facebook Expand Comments** | Switch to "All comments", expand every comment, reply, and "See more" |
+| **Facebook Profile Search** | Extract user ID and search their profile using their first name |
 
 #### Google
 
