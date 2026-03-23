@@ -15,7 +15,7 @@
 
 ## Overview
 
-**OSINT Bookmarklets** is a set of 24 browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
+**OSINT Bookmarklets** is a set of 25 browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
 
 ---
 
@@ -38,11 +38,11 @@ Each bookmarklet runs as a self-contained script in the browser. When activated 
 
 **Drag from the website** - Visit [bookmarklets.notalex.sh](https://bookmarklets.notalex.sh) and drag any link to your bookmarks bar.
 
-**Import all bookmarklets** - Download [`bookmarks.html`](https://github.com/notalex-sh/osint-bookmarklets/raw/main/dist/bookmarks.html) and import it into your browser (**Bookmarks > Import Bookmarks from HTML file**). All 24 bookmarklets will be added in an **OSINT Bookmarklets** folder organized by platform.
+**Import all bookmarklets** - Download [`bookmarks.html`](https://github.com/notalex-sh/osint-bookmarklets/raw/main/dist/bookmarks.html) and import it into your browser (**Bookmarks > Import Bookmarks from HTML file**). All 25 bookmarklets will be added in an **OSINT Bookmarklets** folder organized by platform.
 
 **Copy and paste** - Pre-minified `javascript:` URIs are in [`dist/bookmarklets/`](https://github.com/notalex-sh/osint-bookmarklets/tree/main/dist/bookmarklets). Create a new bookmark and paste the contents as the URL.
 
-**Convert yourself** - The un-minified source files are in `bookmarklets/`. Convert them to bookmarklets at [cybermark.notalex.sh](https://cybermark.notalex.sh).
+**Convert yourself** - The un-minified source files are in `bookmarklets/`. Convert them to bookmarklets at [markletsmith.notalex.sh](https://markletsmith.notalex.sh).
 
 ### Bookmarklets
 
@@ -55,6 +55,7 @@ Each bookmarklet runs as a self-contained script in the browser. When activated 
 | **Instagram Comment Timestamps** | Expand all comments and add inline timestamp badges |
 | **Instagram to Threads** | Open the Threads profile for the current Instagram user |
 | **Instagram Collab Finder** | List tagged users and collaborators on recent posts |
+| **Instagram HD Profile Pic** | Fetch and display the HD profile picture for an Instagram user |
 
 #### Facebook
 
