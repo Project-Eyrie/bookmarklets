@@ -17,7 +17,7 @@
 
 **OSINT Bookmarklets** is a set of browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
 
-The website at [bookmarklets.notalex.sh](https://bookmarklets.notalex.sh) automatically discovers all bookmarklets from this repository, fetches the source code, and converts them to draggable `javascript:` links using [Markletsmith](https://markletsmith.notalex.sh). 
+The website at [bookmarklets.notalex.sh](https://bookmarklets.notalex.sh) automatically discovers all bookmarklets from this repository, fetches the source code, and converts them to draggable `javascript:` links using [Markletsmith](https://markletsmith.notalex.sh). No build step is required — just add a `.js` file to `bookmarklets/` and the website picks it up.
 
 ---
 

@@ -1,13 +1,9 @@
-// SvelteKit configuration with static adapter for GitHub Pages
-import adapter from '@sveltejs/adapter-static';
+// SvelteKit configuration with Vercel adapter for deployment
+import adapter from '@sveltejs/adapter-vercel';
 
 const config = {
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: 'index.html'
-		})
+		adapter: adapter()
 	},
 	vitePlugin: {
 		dynamicCompileOptions: ({ filename }) =>
