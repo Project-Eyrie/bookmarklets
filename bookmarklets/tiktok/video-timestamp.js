@@ -1,4 +1,5 @@
-// Decodes the upload timestamp from a TikTok video ID using Snowflake bit shifting
+// title: "TikTok Video Timestamp"
+// description: "Extract upload timestamp from a video ID using Snowflake decoding"
 (function() {
 
   var existing = document.getElementById('_osint_win');

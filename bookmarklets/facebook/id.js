@@ -1,4 +1,5 @@
-// Extracts Facebook profile ID, username, and display name from the current page
+// title: "Facebook ID"
+// description: "Extract profile ID, username, and display name from a Facebook page"
 (function() {
 
   var existing = document.getElementById('_osint_win');

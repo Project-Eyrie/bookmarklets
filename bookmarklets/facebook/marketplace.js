@@ -1,4 +1,5 @@
-// Extracts Facebook user ID and generates a link to their Marketplace seller page
+// title: "Facebook Marketplace"
+// description: "Extract user ID and open their Marketplace seller page"
 (function() {
 
   var existing = document.getElementById('_osint_win');

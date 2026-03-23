@@ -1,4 +1,5 @@
-// Fetches and displays the HD profile picture for an Instagram user
+// title: "Instagram HD Profile Pic"
+// description: "Fetch and display the HD profile picture for an Instagram user"
 (async function() {
 
   var existing = document.getElementById('_osint_win');

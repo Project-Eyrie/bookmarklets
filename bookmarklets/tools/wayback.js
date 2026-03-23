@@ -1,4 +1,5 @@
-// Opens the current page on the Wayback Machine
+// title: "Wayback Machine"
+// description: "Open the current page on the Wayback Machine"
 (function() {
 
   var existing = document.getElementById('_osint_win');

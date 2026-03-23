@@ -1,4 +1,5 @@
-// Extracts creation and modification timestamps from a Google Maps review
+// title: "Google Review Timestamp"
+// description: "Extract the exact creation and modification date of a Google Maps review"
 (function() {
 
   var existing = document.getElementById('_osint_win');

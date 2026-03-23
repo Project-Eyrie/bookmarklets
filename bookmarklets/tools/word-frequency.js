@@ -1,4 +1,5 @@
-// Counts and ranks every visible word on the page by frequency
+// title: "Word Frequency"
+// description: "Count and rank every visible word on the page by frequency"
 (function() {
 
   var existing = document.getElementById('_osint_win');

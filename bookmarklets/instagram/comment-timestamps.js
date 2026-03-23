@@ -1,4 +1,5 @@
-// Expands all Instagram comments and replies, then adds inline timestamp badges
+// title: "Instagram Comment Timestamps"
+// description: "Expand all comments and add inline timestamp badges"
 (function() {
 
   var existing = document.getElementById('_osint_win');

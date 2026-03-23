@@ -1,4 +1,5 @@
-// Opens Arctic Shift to search a Reddit user's post history
+// title: "Reddit Arctic Shift"
+// description: "Open the current user on Arctic Shift to search their post history"
 (function() {
 
   var existing = document.getElementById('_osint_win');

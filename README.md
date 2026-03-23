@@ -15,7 +15,9 @@
 
 ## Overview
 
-**OSINT Bookmarklets** is a set of 25 browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
+**OSINT Bookmarklets** is a set of browser bookmarklets built for researchers and analysts. It extracts hidden metadata, timestamps, and user information from social media platforms by parsing page source, querying platform APIs, and decoding embedded data structures.
+
+The website at [bookmarklets.notalex.sh](https://bookmarklets.notalex.sh) automatically discovers all bookmarklets from this repository, fetches the source code, and converts them to draggable `javascript:` links using [Markletsmith](https://markletsmith.notalex.sh). No build step is required — just add a `.js` file to `bookmarklets/` and the website picks it up.
 
 ---
 
@@ -38,11 +40,101 @@ Each bookmarklet runs as a self-contained script in the browser. When activated 
 
 **Drag from the website** - Visit [bookmarklets.notalex.sh](https://bookmarklets.notalex.sh) and drag any link to your bookmarks bar.
 
-**Import all bookmarklets** - Download [`bookmarks.html`](https://github.com/notalex-sh/osint-bookmarklets/raw/main/dist/bookmarks.html) and import it into your browser (**Bookmarks > Import Bookmarks from HTML file**). All 25 bookmarklets will be added in an **OSINT Bookmarklets** folder organized by platform.
-
-**Copy and paste** - Pre-minified `javascript:` URIs are in [`dist/bookmarklets/`](https://github.com/notalex-sh/osint-bookmarklets/tree/main/dist/bookmarklets). Create a new bookmark and paste the contents as the URL.
-
 **Convert yourself** - The un-minified source files are in `bookmarklets/`. Convert them to bookmarklets at [markletsmith.notalex.sh](https://markletsmith.notalex.sh).
+
+
+### Overlay Window Template
+
+All bookmarklets use a consistent draggable overlay window. This is the template used when creating a new bookmarklet:
+
+```js
+// title: "Example Tool"
+// description: "Description of what this does"
+(function() {
+
+  var existing = document.getElementById('_osint_win');
+  if (existing) existing.remove();
+
+  var win = document.createElement('div');
+  win.id = '_osint_win';
+  win.style.cssText = [
+    'position:fixed',
+    'top:48px',
+    'right:48px',
+    'width:420px',
+    'max-height:70vh',
+    'background:#0a0a0a',
+    'border:1px solid #222',
+    'color:#eee',
+    'font-family:"SF Mono","Cascadia Mono","Fira Mono",Consolas,monospace',
+    'font-size:12px',
+    'z-index:2147483647',
+    'display:flex',
+    'flex-direction:column',
+    'box-shadow:0 0 0 1px #000'
+  ].join(';');
+
+  var bar = document.createElement('div');
+  bar.style.cssText = [
+    'display:flex',
+    'align-items:center',
+    'justify-content:space-between',
+    'padding:8px 12px',
+    'background:#000',
+    'border-bottom:1px solid #222',
+    'cursor:grab',
+    'user-select:none',
+    '-webkit-user-select:none'
+  ].join(';');
+
+  var titleEl = document.createElement('span');
+  titleEl.textContent = 'WINDOW TITLE';
+  titleEl.style.cssText = 'font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#777';
+
+  var closeBtn = document.createElement('button');
+  closeBtn.textContent = '\u00d7';
+  closeBtn.style.cssText = 'background:none;border:none;color:#777;font-size:18px;cursor:pointer;padding:0;line-height:1;font-family:inherit';
+  closeBtn.onmouseover = function() { closeBtn.style.color = '#fff'; };
+  closeBtn.onmouseout = function() { closeBtn.style.color = '#777'; };
+  closeBtn.onclick = function() { win.remove(); };
+
+  bar.appendChild(titleEl);
+  bar.appendChild(closeBtn);
+
+  var body = document.createElement('div');
+  body.style.cssText = 'overflow-y:auto;padding:12px';
+
+  win.appendChild(bar);
+  win.appendChild(body);
+
+  var dx = 0, dy = 0, sx = 0, sy = 0;
+  bar.onmousedown = function(e) {
+    e.preventDefault();
+    sx = e.clientX;
+    sy = e.clientY;
+    bar.style.cursor = 'grabbing';
+    document.onmousemove = function(e) {
+      dx = sx - e.clientX;
+      dy = sy - e.clientY;
+      sx = e.clientX;
+      sy = e.clientY;
+      win.style.top = (win.offsetTop - dy) + 'px';
+      win.style.left = (win.offsetLeft - dx) + 'px';
+      win.style.right = 'auto';
+    };
+    document.onmouseup = function() {
+      document.onmousemove = null;
+      document.onmouseup = null;
+      bar.style.cursor = 'grab';
+    };
+  };
+
+  document.body.appendChild(win);
+
+  // Add your content to `body` here
+
+})();
+```
 
 ### Bookmarklets
 
@@ -133,7 +225,7 @@ These bookmarklets exploit the fact that web applications embed far more data in
 
 ## Notes
 
-- **Browser support** - Tested on Chrome and Firefox; other browsers may have varying support for bookmarklet execution
+- **Browser support** - Tested on Edge and Firefox; other browsers may have varying support for bookmarklet execution
 - **Rate limiting** - Some bookmarklets make API requests (Instagram, Reddit) and may be rate limited if used repeatedly in quick succession
 - **Dynamic pages** - Bookmarklets that parse HTML source may need a page refresh on SPAs where content loads after initial render
 - **Private accounts** - Instagram bookmarklets will have limited data access on private profiles unless the account is followed

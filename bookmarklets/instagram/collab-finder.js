@@ -1,4 +1,5 @@
-// Lists tagged users and collaborators on an Instagram profile's recent posts
+// title: "Instagram Collab Finder"
+// description: "List tagged users and collaborators on recent posts"
 (function() {
 
   var existing = document.getElementById('_osint_win');

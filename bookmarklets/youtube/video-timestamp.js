@@ -1,4 +1,5 @@
-// Extracts and displays the exact upload timestamp of a YouTube video
+// title: "YouTube Video Timestamp"
+// description: "Show exact upload date and time for a video, short, or live stream"
 (function() {
 
   var existing = document.getElementById('_osint_win');

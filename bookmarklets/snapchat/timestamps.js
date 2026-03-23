@@ -1,4 +1,5 @@
-// Adds timestamp badges to Spotlight and Story tiles on a Snapchat profile page
+// title: "Snapchat Timestamps"
+// description: "Add timestamp badges to Spotlight and Story tiles on a profile page"
 (function() {
 
   var existing = document.getElementById('_osint_win');

@@ -1,4 +1,5 @@
-// Fetches and displays Reddit account creation date, age, karma, and flags
+// title: "Reddit Account Info"
+// description: "Fetch account creation date, age, karma breakdown, and flags"
 (function() {
 
   var existing = document.getElementById('_osint_win');

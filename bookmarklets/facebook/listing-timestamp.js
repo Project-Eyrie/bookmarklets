@@ -1,4 +1,5 @@
-// Extracts and displays the creation timestamp of a Facebook Marketplace listing
+// title: "Facebook Listing Timestamp"
+// description: "Show the exact date a Facebook Marketplace listing was created"
 (function() {
 
   var existing = document.getElementById('_osint_win');

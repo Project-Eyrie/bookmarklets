@@ -1,4 +1,5 @@
-// Extracts YouTube channel ID, handle, subscriber count, and join date
+// title: "YouTube Channel Info"
+// description: "Extract channel ID, handle, subscriber count, and join date"
 (function() {
 
   var existing = document.getElementById('_osint_win');

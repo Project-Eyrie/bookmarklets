@@ -1,4 +1,5 @@
-// Finds and lists all images on the page including CSS background images
+// title: "All Images"
+// description: "Find and list every image on the page, including CSS backgrounds"
 (function() {
 
   var existing = document.getElementById('_osint_win');

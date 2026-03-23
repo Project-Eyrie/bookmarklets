@@ -1,4 +1,5 @@
-// Extracts Facebook user ID and first name, then navigates to profile search
+// title: "Facebook Profile Search"
+// description: "Extract user ID and search their profile using their first name"
 (function() {
 
   var existing = document.getElementById('_osint_win');

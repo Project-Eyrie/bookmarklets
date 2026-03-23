@@ -1,4 +1,5 @@
-// Interactive page search with highlighted matches and a clickable results list
+// title: "Find on Page"
+// description: "Search with highlighted matches and a clickable results list"
 (function() {
 
   var existing = document.getElementById('_osint_win');

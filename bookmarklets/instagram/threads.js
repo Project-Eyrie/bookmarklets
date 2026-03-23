@@ -1,4 +1,5 @@
-// Opens the corresponding Threads profile for the current Instagram user
+// title: "Instagram to Threads"
+// description: "Open the Threads profile for the current Instagram user"
 (function() {
 
   var existing = document.getElementById('_osint_win');

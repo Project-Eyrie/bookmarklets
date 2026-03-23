@@ -1,4 +1,5 @@
-// Displays the document.lastModified date for the current page
+// title: "Last Modified"
+// description: "Show the document.lastModified date for the current page"
 (function() {
 
   var existing = document.getElementById('_osint_win');

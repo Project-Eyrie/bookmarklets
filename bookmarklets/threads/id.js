@@ -1,4 +1,5 @@
-// Extracts Threads user ID, username, and bio from a profile page
+// title: "Threads ID"
+// description: "Extract numeric user ID and username from a Threads profile"
 (function() {
 
   var existing = document.getElementById('_osint_win');

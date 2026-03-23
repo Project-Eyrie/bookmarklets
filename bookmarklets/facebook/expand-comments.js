@@ -1,4 +1,5 @@
-// Expands all comments, replies, and "See more" elements on a Facebook post
+// title: "Facebook Expand Comments"
+// description: "Expand all comments, replies, and See more elements on a Facebook post"
 (function() {
 
   var existing = document.getElementById('_osint_win');

@@ -1,4 +1,5 @@
-// Extracts X profile info including user ID, creation date, and image URLs
+// title: "X Profile Info"
+// description: "Extract user ID, creation date, banner and profile image URLs"
 (function() {
 
   var existing = document.getElementById('_osint_win');

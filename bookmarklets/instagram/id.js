@@ -1,4 +1,5 @@
-// Extracts Instagram user ID, username, and display name from a profile page
+// title: "Instagram ID"
+// description: "Extract numeric user ID, username, and display name from a profile page"
 (function() {
 
   var existing = document.getElementById('_osint_win');

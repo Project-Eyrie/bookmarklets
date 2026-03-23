@@ -1,4 +1,5 @@
-// Extracts and displays the exact timestamp of an Instagram post, reel, or story
+// title: "Instagram Post Timestamp"
+// description: "Show the exact date and time for an opened post, reel, or story"
 (function() {
 
   var existing = document.getElementById('_osint_win');
