@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="logo.png" alt="OSINT Bookmarklets" width="128" />
+
 # OSINT Bookmarklets
 
 > A collection of browser bookmarklets for open-source intelligence gathering across social media platforms.
